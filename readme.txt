@@ -1,4 +1,4 @@
-2019 - Maurizio Condini
+201912xx - Maurizio Condini
 Work for PHP 7.2 compatibily (work in progress)
 
 20110626 Andrei Neculau
@@ -15,6 +15,7 @@ http://labs.beffa.org/w2box/
 http://www.andreineculau.com
 
 (c) 2019, Maurizio Condini
+http://www.defcon.it
 
 Licence:
 w2box is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0
