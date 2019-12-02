@@ -9,12 +9,32 @@ http://labs.beffa.org/w2box/
 (c) 2009-2011, Andrei Neculau
 http://www.andreineculau.com
 
+(c) 2019 Maurizio Condini
+http://www.defcon.it
+
 Licence:
 w2box is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 */
 
 $config = array();
+
+// Maurizio 2019-12-02 | source: https://wp-mix.com/php-absolute-path-document-root-base-url/
+// base directory
+$base_dir = __DIR__;
+// doc root
+$doc_root = preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']);
+// server protocol
+$protocol = empty($_SERVER['HTTPS']) ? 'http' : 'https';
+// domain name
+$domain = $_SERVER['SERVER_NAME'];
+// base url
+$base_url = preg_replace("!^${doc_root}!", '', $base_dir);
+// server port
+$port = $_SERVER['SERVER_PORT'];
+$disp_port = ($protocol == 'http' && $port == 80 || $protocol == 'https' && $port == 443) ? '' : ":$port";
+// put em all together to get the complete base URL
+$url = "${protocol}://${domain}${disp_port}${base_url}";
 
 // --- basic ---
 // title of your w2box
@@ -58,7 +78,7 @@ $config['enable_folder_maxdepth'] = 3;
 //activate upload progress bar
 $config['upload_progressbar'] = false;
 //path to the cgi script as an URL link relative to public url of the script
-$config['upload_cgiscript'] = BASE_URL . '/upload.cgi';
+$config['upload_cgiscript'] = $base_url . '/upload.cgi';
 //$config['upload_cgiscript']="/cgi-bin/upload.cgi
 //path to the tmp dir, if this one doesn't work, use a full path
 //(ie "/home/username/tmp", "~tmp", "C:/wamp/tmp")
