@@ -1,3 +1,6 @@
+2019 - Maurizio Condini
+Work for PHP 7.2 compatibily (work in progress)
+
 20110626 Andrei Neculau
 I have been using w2box for small projects for 2-3 years now. Thought the least I can do as a thank-you-w2box! is release the project back into the wild (including my small fixes & additions), as Clement Beffa has moved away from the project. Enjoy & fork away!
 
@@ -11,13 +14,15 @@ http://labs.beffa.org/w2box/
 (c) 2009-2011, Andrei Neculau
 http://www.andreineculau.com
 
+(c) 2019, Maurizio Condini
+
 Licence:
 w2box is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 
 You are free:
-* to Share — to copy, distribute and transmit the work
-* to Remix — to adapt the work
+* to Share â€” to copy, distribute and transmit the work
+* to Remix â€” to adapt the work
 Under the following conditions:
 * Attribution. You must attribute the work in the manner specified by the author or
 licensor (but not in any way that suggests that they endorse you or your use of the work).
